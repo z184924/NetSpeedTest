@@ -128,7 +128,8 @@ if __name__ == "__main__":
         bind_port = int(sys.argv[3])
     else:
         server_program(bind_ip, bind_port)
-    if mode == "server":
-        server_program(bind_ip, bind_port)
-    elif mode == "client":
-        client_program(bind_ip, bind_port)
+    if mode:
+        if mode == "server":
+            server_program(bind_ip, bind_port)
+        elif mode == "client":
+            client_program(bind_ip, bind_port)
